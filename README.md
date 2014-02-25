@@ -11,7 +11,7 @@ How-to :
 1 - Clone repo<br/>
 2 - Open project with NetBeans (unlike Eclipse, no need to import, just "File - Open project")<br/>
 3 - Make sure your database is running (WAMP/MAMP)<br/>
-4 - Create a MySQL Database (ex : suprails_db)
+4 - Create a MySQL Database (ex : suprails_db)<br/>
 5 - Create a [datasource](http://itsolutionsforall.com/datasource_jpa.php) on GlassFish (http://SERVER_IP:4848/)<br/>
 6 - Edit "persistence.xml" file if needed ("Configuration File" or "SupRailsWS/src/conf" directory)
 
