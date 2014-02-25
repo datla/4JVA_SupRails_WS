@@ -15,7 +15,7 @@ How-to :
 5 - Edit "persistence.xml" file if needed ("Configuration File" or "SupRailsWS/src/conf" directory)
 
 
-Login : admin
+Login : admin<br/>
 Password : admin
 
 Java rocks.
