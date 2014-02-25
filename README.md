@@ -18,7 +18,8 @@ How-to :
 
 Login : admin<br/>
 Password : admin
-<br/><br/>
+
+
 -----------------------
 
 Test SOAP WebService :
