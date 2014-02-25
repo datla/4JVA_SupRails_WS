@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ressource.suprails.supinfo.com/" xmlns:tns="http://ressource.suprails.supinfo.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getTrips" nillable="true" type="tns:getAllTrips"/>
+
+  <xs:element name="getTripsResponse" nillable="true" type="tns:getAllTripsResponse"/>
+
+  <xs:element name="processOrder" type="tns:processOrder"/>
+
+  <xs:element name="processOrderResponse" type="tns:processOrderResponse"/>
+
+  <xs:complexType name="processOrder">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:customerOrder" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customerOrder">
+    <xs:sequence>
+      <xs:element name="customer" type="tns:customer" minOccurs="0"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="trip" type="tns:trip" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customer">
+    <xs:sequence>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="trip">
+    <xs:sequence>
+      <xs:element name="arrivalStation" type="tns:trainStation" minOccurs="0"/>
+      <xs:element name="departureStation" type="tns:trainStation" minOccurs="0"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="price" type="xs:decimal" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="trainStation">
+    <xs:sequence>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="processOrderResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:customerOrder" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAllTrips">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getAllTripsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:trip" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
