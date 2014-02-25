@@ -23,11 +23,11 @@ Password : admin
 Test SOAP WebService :
 
 * With NetBeans, launch the projet and right-click on "TripResourcesSOAP" file under "Web Services" folder on the left of your screen - Then "Test Web Service".
-* Or go to : http://<SERVER>:8080/SupRailsWS/TripResourceSOAPService?Tester
+* Or go to : http://SERVER_IP:8080/SupRailsWS/TripResourceSOAPService?Tester
 
 Test REST WebService :
 
 * Do GET or POST request on this URL : 
-http://<SERVER>:8080/SupRailsWS/resources/rest/trips
+http://SERVER_IP:8080/SupRailsWS/resources/rest/trips
 
 Java rocks.
