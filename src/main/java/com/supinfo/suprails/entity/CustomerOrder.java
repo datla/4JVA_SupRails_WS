@@ -3,6 +3,9 @@ package com.supinfo.suprails.entity;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.supinfo.suprails.entity.Customer;
+import com.supinfo.suprails.entity.Trip;
+
 /**
  *
  * @author Guillaume
